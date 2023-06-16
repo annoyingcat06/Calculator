@@ -1,15 +1,19 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package calculator;
 
+
 /**
  *
  * @author AnnoyingCat
  */
 public class Calculator extends javax.swing.JFrame {
-
+    private double operand1 = 0;
+    private double operand2 = 0;
+    private String operatorSymbol = "";
     /**
      * Creates new form Calculator
      */
@@ -27,177 +31,169 @@ public class Calculator extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButtondivide = new javax.swing.JButton();
-        jButtonminus = new javax.swing.JButton();
-        jButtonmultiply = new javax.swing.JButton();
-        jButton0 = new javax.swing.JButton();
-        jButtondot = new javax.swing.JButton();
+        txtResult = new javax.swing.JTextField();
+        btn1 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        btn4 = new javax.swing.JButton();
+        btn5 = new javax.swing.JButton();
+        btn6 = new javax.swing.JButton();
+        btn7 = new javax.swing.JButton();
+        btn8 = new javax.swing.JButton();
+        btn9 = new javax.swing.JButton();
+        btnDivision = new javax.swing.JButton();
+        btnMinus = new javax.swing.JButton();
+        btnMultiplication = new javax.swing.JButton();
+        btn0 = new javax.swing.JButton();
         jButtonequal = new javax.swing.JButton();
-        jButtonplus = new javax.swing.JButton();
-        jButtonce = new javax.swing.JButton();
-        jButtonc = new javax.swing.JButton();
+        btnPlus = new javax.swing.JButton();
+        btnClear = new javax.swing.JButton();
+        btnPlusMinus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        txtResult.setEditable(false);
+        txtResult.setBackground(new java.awt.Color(255, 255, 255));
+        txtResult.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        txtResult.setForeground(new java.awt.Color(0, 0, 0));
+        txtResult.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
+        txtResult.setFocusCycleRoot(true);
+        txtResult.setFocusTraversalPolicyProvider(true);
+        txtResult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                txtResultActionPerformed(evt);
             }
         });
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
-        jButton1.setText("1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn1.setBackground(new java.awt.Color(204, 204, 204));
+        btn1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn1.setForeground(new java.awt.Color(0, 0, 0));
+        btn1.setText("1");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(204, 204, 204));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
-        jButton2.setText("2");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btn2.setBackground(new java.awt.Color(204, 204, 204));
+        btn2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn2.setForeground(new java.awt.Color(0, 0, 0));
+        btn2.setText("2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btn2ActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(204, 204, 204));
-        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
-        jButton3.setText("3");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        btn3.setBackground(new java.awt.Color(204, 204, 204));
+        btn3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn3.setForeground(new java.awt.Color(0, 0, 0));
+        btn3.setText("3");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                btn3ActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(204, 204, 204));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn4.setBackground(new java.awt.Color(204, 204, 204));
+        btn4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn4.setForeground(new java.awt.Color(0, 0, 0));
+        btn4.setText("4");
+        btn4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btn4ActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(204, 204, 204));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(0, 0, 0));
-        jButton5.setText("5");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btn5.setBackground(new java.awt.Color(204, 204, 204));
+        btn5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn5.setForeground(new java.awt.Color(0, 0, 0));
+        btn5.setText("5");
+        btn5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btn5ActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(204, 204, 204));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(0, 0, 0));
-        jButton6.setText("6");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        btn6.setBackground(new java.awt.Color(204, 204, 204));
+        btn6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn6.setForeground(new java.awt.Color(0, 0, 0));
+        btn6.setText("6");
+        btn6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                btn6ActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(204, 204, 204));
-        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(0, 0, 0));
-        jButton7.setText("7");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        btn7.setBackground(new java.awt.Color(204, 204, 204));
+        btn7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn7.setForeground(new java.awt.Color(0, 0, 0));
+        btn7.setText("7");
+        btn7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                btn7ActionPerformed(evt);
             }
         });
 
-        jButton8.setBackground(new java.awt.Color(204, 204, 204));
-        jButton8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(0, 0, 0));
-        jButton8.setText("8");
-        jButton8.addActionListener(new java.awt.event.ActionListener() {
+        btn8.setBackground(new java.awt.Color(204, 204, 204));
+        btn8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn8.setForeground(new java.awt.Color(0, 0, 0));
+        btn8.setText("8");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton8ActionPerformed(evt);
+                btn8ActionPerformed(evt);
             }
         });
 
-        jButton9.setBackground(new java.awt.Color(204, 204, 204));
-        jButton9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(0, 0, 0));
-        jButton9.setText("9");
-        jButton9.addActionListener(new java.awt.event.ActionListener() {
+        btn9.setBackground(new java.awt.Color(204, 204, 204));
+        btn9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn9.setForeground(new java.awt.Color(0, 0, 0));
+        btn9.setText("9");
+        btn9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                btn9ActionPerformed(evt);
             }
         });
 
-        jButtondivide.setBackground(new java.awt.Color(204, 204, 204));
-        jButtondivide.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtondivide.setForeground(new java.awt.Color(0, 0, 0));
-        jButtondivide.setText("/");
-        jButtondivide.addActionListener(new java.awt.event.ActionListener() {
+        btnDivision.setBackground(new java.awt.Color(204, 204, 204));
+        btnDivision.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnDivision.setForeground(new java.awt.Color(0, 0, 0));
+        btnDivision.setText("/");
+        btnDivision.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtondivideActionPerformed(evt);
+                btnDivisionActionPerformed(evt);
             }
         });
 
-        jButtonminus.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonminus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonminus.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonminus.setText("-");
-        jButtonminus.addActionListener(new java.awt.event.ActionListener() {
+        btnMinus.setBackground(new java.awt.Color(204, 204, 204));
+        btnMinus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMinus.setForeground(new java.awt.Color(0, 0, 0));
+        btnMinus.setText("-");
+        btnMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonminusActionPerformed(evt);
+                btnMinusActionPerformed(evt);
             }
         });
 
-        jButtonmultiply.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonmultiply.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonmultiply.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonmultiply.setText("*");
-        jButtonmultiply.addActionListener(new java.awt.event.ActionListener() {
+        btnMultiplication.setBackground(new java.awt.Color(204, 204, 204));
+        btnMultiplication.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnMultiplication.setForeground(new java.awt.Color(0, 0, 0));
+        btnMultiplication.setText("*");
+        btnMultiplication.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonmultiplyActionPerformed(evt);
+                btnMultiplicationActionPerformed(evt);
             }
         });
 
-        jButton0.setBackground(new java.awt.Color(204, 204, 204));
-        jButton0.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButton0.setForeground(new java.awt.Color(0, 0, 0));
-        jButton0.setText("0");
-        jButton0.addActionListener(new java.awt.event.ActionListener() {
+        btn0.setBackground(new java.awt.Color(204, 204, 204));
+        btn0.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn0.setForeground(new java.awt.Color(0, 0, 0));
+        btn0.setText("0");
+        btn0.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton0ActionPerformed(evt);
-            }
-        });
-
-        jButtondot.setBackground(new java.awt.Color(204, 204, 204));
-        jButtondot.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtondot.setForeground(new java.awt.Color(0, 0, 0));
-        jButtondot.setText(".");
-        jButtondot.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtondotActionPerformed(evt);
+                btn0ActionPerformed(evt);
             }
         });
 
@@ -211,33 +207,33 @@ public class Calculator extends javax.swing.JFrame {
             }
         });
 
-        jButtonplus.setBackground(new java.awt.Color(204, 204, 204));
-        jButtonplus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonplus.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonplus.setText("+");
-        jButtonplus.addActionListener(new java.awt.event.ActionListener() {
+        btnPlus.setBackground(new java.awt.Color(204, 204, 204));
+        btnPlus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnPlus.setForeground(new java.awt.Color(0, 0, 0));
+        btnPlus.setText("+");
+        btnPlus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonplusActionPerformed(evt);
+                btnPlusActionPerformed(evt);
             }
         });
 
-        jButtonce.setBackground(new java.awt.Color(255, 102, 102));
-        jButtonce.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonce.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonce.setText("CE");
-        jButtonce.addActionListener(new java.awt.event.ActionListener() {
+        btnClear.setBackground(new java.awt.Color(255, 102, 102));
+        btnClear.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnClear.setForeground(new java.awt.Color(0, 0, 0));
+        btnClear.setText("CE");
+        btnClear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonceActionPerformed(evt);
+                btnClearActionPerformed(evt);
             }
         });
 
-        jButtonc.setBackground(new java.awt.Color(255, 102, 102));
-        jButtonc.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jButtonc.setForeground(new java.awt.Color(0, 0, 0));
-        jButtonc.setText("C");
-        jButtonc.addActionListener(new java.awt.event.ActionListener() {
+        btnPlusMinus.setBackground(new java.awt.Color(204, 204, 204));
+        btnPlusMinus.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnPlusMinus.setForeground(new java.awt.Color(0, 0, 0));
+        btnPlusMinus.setText("+/-");
+        btnPlusMinus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtoncActionPerformed(evt);
+                btnPlusMinusActionPerformed(evt);
             }
         });
 
@@ -248,45 +244,43 @@ public class Calculator extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField1)
+                    .addComponent(txtResult)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonce, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButtonc, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtondivide, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButtonminus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtonmultiply, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(btnMultiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtonplus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(btn0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtondot, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(btnPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonequal, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
@@ -295,35 +289,37 @@ public class Calculator extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtResult, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnClear, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMultiplication, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonce, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonc, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtondivide, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonmultiply, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonminus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btn9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonplus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtondot, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonequal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonequal, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPlusMinus, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
@@ -347,118 +343,192 @@ public class Calculator extends javax.swing.JFrame {
         pack();
     }// </editor-fold>                        
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "3");
+     if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn3.getText());
+            value1 = 3;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn3.getText());
+            value2 = 3;
+        }
+    }                                    
 
-    }                                        
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+    private void txtResultActionPerformed(java.awt.event.ActionEvent evt) {                                          
         // TODO add your handling code here:
-    }                                           
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-        jTextField1.setText(jTextField1.getText() + "1");
-    
-    }                                        
-
-    private void jButtonceActionPerformed(java.awt.event.ActionEvent evt) {                                          
-        // TODO add your handling code here:
-        jTextField1.setText("");
-
     }                                         
 
-    private void jButtondivideActionPerformed(java.awt.event.ActionEvent evt) {                                              
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "/");
+     if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn1.getText());
+            value1 = 1;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn1.getText());
+            value2 = 1;
+        }
+    }                                    
 
-    }                                             
-
-    private void jButtoncActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btnClearActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-        String text = jTextField1.getText();
-        int length = text.length();
-        if (length > 0) {
-            text = text.substring(0, length - 1);
-            jTextField1.setText(text);
+  txtResult.setText(" ");
+
+
+    }                                        
+
+    private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+   if(!(txtResult.getText().isEmpty())){
+        operator = "division";
+        txtResult.setText(txtResult.getText()+ "/");
+        }
+    }                                           
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+     if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn4.getText());
+            value1 = 4;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn4.getText());
+            value2 = 4;
+        }
+    }                                    
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+             if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn5.getText());
+            value1 = 5;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn5.getText());
+            value2 = 5;
+        }
+    }                                    
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+             if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn6.getText());
+            value1 = 6;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn6.getText());
+            value2 = 6;
+        }
+    }                                    
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+             if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn7.getText());
+            value1 = 7;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn7.getText());
+            value2 = 7;
+        }
+    }                                    
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+     if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn1.getText());
+            value1 = 8;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn8.getText());
+            value2 = 8;
+        }
+    }                                    
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+     if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn9.getText());
+            value1 = 9;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn9.getText());
+            value2 = 9;
+        }
+    }                                    
+
+    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {                                     
+        // TODO add your handling code here:
+
+             if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn0.getText());
+            value1 = 0;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn0.getText());
+            value2 = 0;
+        }
+    }                                    
+
+    private void btnPlusActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+               if(!(txtResult.getText().isEmpty())){
+        operator = "plus";
+        txtResult.setText(txtResult.getText()+ "+");
+        }
+    }                                       
+
+    private void btnMinusActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        // TODO add your handling code here:
+      if(!(txtResult.getText().isEmpty())){
+        operator = "minus";
+        txtResult.setText(txtResult.getText()+ "-");
         }
     }                                        
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btnMultiplicationActionPerformed(java.awt.event.ActionEvent evt) {                                                  
         // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "4");
+      if(!(txtResult.getText().isEmpty())){
+        operator = "multiplication";
+        txtResult.setText(txtResult.getText()+ "*");
+        }
+    }                                                 
 
-    }                                        
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {                                     
         // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "5");
-    }                                        
-
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "6");
-    }                                        
-
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "7");
-    }                                        
-
-    private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "8");
-    }                                        
-
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "9");
-    }                                        
-
-    private void jButton0ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "0");
-    }                                        
-
-    private void jButtondotActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + ".");
-    }                                          
-
-    private void jButtonplusActionPerformed(java.awt.event.ActionEvent evt) {                                            
-        // TODO add your handling code here:
-                jTextField1.setText(jTextField1.getText() + "+");
-    }                                           
-
-    private void jButtonminusActionPerformed(java.awt.event.ActionEvent evt) {                                             
-        // TODO add your handling code here:
-                        jTextField1.setText(jTextField1.getText() + "-");
-
-    }                                            
-
-    private void jButtonmultiplyActionPerformed(java.awt.event.ActionEvent evt) {                                                
-        // TODO add your handling code here:
-                        jTextField1.setText(jTextField1.getText() + "*");
-
-    }                                               
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
-                        jTextField1.setText(jTextField1.getText() + "2");
-
-    }                                        
+       if(txtResult.getText().isEmpty())
+        {
+            txtResult.setText(btn2.getText());
+            value1 = 2;          
+        } else {
+            txtResult.setText(txtResult.getText()+ "" + btn2.getText());
+            value2 = 2;
+        }
+    }                                    
 
     private void jButtonequalActionPerformed(java.awt.event.ActionEvent evt) {                                             
         // TODO add your handling code here:
-          String expression = jTextField1.getText();
-        if (!expression.isEmpty()) {
-            try {
-                double result = evaluateExpression(expression);
-                jTextField1.setText(Double.toString(result));
-            } catch (IllegalArgumentException ex) {
-                jTextField1.setText("Error");
-            }
+     double answer = 0;
+    if (operator.equals("plus")) {
+        answer = value1 + value2;
+    } else if (operator.equals("minus")) {
+        answer = value1 - value2;
+    } else if (operator.equals("multiplication")) {
+        answer = value1 * value2;
+    } else if (operator.equals("division")) {
+        answer = value1 / value2;
+    }
+    
+    String result = Double.toString(answer);
+    txtResult.setText(result);
+    }                                            
+
+    private void btnPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+                if(!(txtResult.getText().isEmpty())){
+        operator = "plus";
+        txtResult.setText(txtResult.getText()+  "+");
         }
     }                                            
 
@@ -496,27 +566,28 @@ public class Calculator extends javax.swing.JFrame {
             }
         });
     }
-
+static int value1;
+static int value2;
+static String operator;
     // Variables declaration - do not modify                     
-    private javax.swing.JButton jButton0;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JButton jButtonc;
-    private javax.swing.JButton jButtonce;
-    private javax.swing.JButton jButtondivide;
-    private javax.swing.JButton jButtondot;
+    private javax.swing.JButton btn0;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
+    private javax.swing.JButton btn5;
+    private javax.swing.JButton btn6;
+    private javax.swing.JButton btn7;
+    private javax.swing.JButton btn8;
+    private javax.swing.JButton btn9;
+    private javax.swing.JButton btnClear;
+    private javax.swing.JButton btnDivision;
+    private javax.swing.JButton btnMinus;
+    private javax.swing.JButton btnMultiplication;
+    private javax.swing.JButton btnPlus;
+    private javax.swing.JButton btnPlusMinus;
     private javax.swing.JButton jButtonequal;
-    private javax.swing.JButton jButtonminus;
-    private javax.swing.JButton jButtonmultiply;
-    private javax.swing.JButton jButtonplus;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txtResult;
     // End of variables declaration                   
 }
